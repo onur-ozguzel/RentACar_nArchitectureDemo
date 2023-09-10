@@ -1,4 +1,6 @@
-It was created by Engin Demirog's C# .NET Core Clean Architecture & CQRS Project Infrastructure Course.
+# RentACar_nArchitectureDemo
+
+Created by Engin Demirog's C# .NET Core Clean Architecture & CQRS Project Infrastructure Course.
 
 
 https://www.udemy.com/course/c-net-core-clean-architecture-cqrs-proje-altyap-kursu-1
