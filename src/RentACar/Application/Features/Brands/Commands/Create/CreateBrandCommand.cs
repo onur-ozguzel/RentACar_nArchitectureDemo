@@ -13,29 +13,28 @@ namespace Application.Features.Brands.Commands.Create
     public class CreateBrandCommand : IRequest<CreatedBrandResponse>
     {
         public string Name { get; set; } = string.Empty;
+    }
 
+    public class CreateBrandCommandHandler : IRequestHandler<CreateBrandCommand, CreatedBrandResponse>
+    {
+        private readonly IBrandRepository _brandRepository;
+        private readonly IMapper _mapper;
 
-        public class CreateBrandCommandHandler : IRequestHandler<CreateBrandCommand, CreatedBrandResponse>
+        public CreateBrandCommandHandler(IBrandRepository brandRepository, IMapper mapper)
         {
-            private readonly IBrandRepository _brandRepository;
-            private readonly IMapper _mapper;
+            _brandRepository = brandRepository;
+            _mapper = mapper;
+        }
 
-            public CreateBrandCommandHandler(IBrandRepository brandRepository, IMapper mapper)
-            {
-                _brandRepository = brandRepository;
-                _mapper = mapper;
-            }
+        public async Task<CreatedBrandResponse> Handle(CreateBrandCommand request, CancellationToken cancellationToken)
+        {
+            var brand = _mapper.Map<Brand>(request);
+            brand.Id = Guid.NewGuid();
 
-            public async Task<CreatedBrandResponse> Handle(CreateBrandCommand request, CancellationToken cancellationToken)
-            {
-                var brand = _mapper.Map<Brand>(request);
-                brand.Id = Guid.NewGuid();
+            await _brandRepository.AddAsync(brand);
 
-                await _brandRepository.AddAsync(brand);
-
-                var createdBrandResponse = _mapper.Map<CreatedBrandResponse>(brand);
-                return createdBrandResponse;
-            }
+            var createdBrandResponse = _mapper.Map<CreatedBrandResponse>(brand);
+            return createdBrandResponse;
         }
     }
 }
