@@ -4,7 +4,6 @@ using Application.Features.Brands.Commands.Update;
 using Application.Features.Brands.Queries.GetById;
 using Application.Features.Brands.Queries.GetList;
 using Core.Application.Requests;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers
