@@ -17,6 +17,7 @@ namespace Persistance.Contexts
 
         public DbSet<OperationClaim> OperationClaim { get; set; }
         public DbSet<OtpAuthenticator> OtpAuthenticators { get; set; }
+        public DbSet<EmailAuthenticator> EmailAuthenticators { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserOperationClaim> UserOperationClaims { get; set; }
