@@ -9,13 +9,13 @@ using System.Security.Cryptography;
 
 namespace Core.Security.JWT
 {
-    public class JWTHelper : ITokenHelper
+    public class JwtHelper : ITokenHelper
     {
         private IConfiguration Configuration { get; }
         private readonly TokenOptions _tokenOptions;
         private DateTime _accessTokenExpiration;
 
-        public JWTHelper(IConfiguration configuration)
+        public JwtHelper(IConfiguration configuration)
         {
             Configuration = configuration;
             const string configurationSection = "TokenOptions";
