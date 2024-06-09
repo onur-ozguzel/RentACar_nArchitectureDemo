@@ -4,6 +4,12 @@ namespace Core.Security.Entities
 {
     public class RefreshToken : Entity<Guid>
     {
+        public RefreshToken()
+        {
+            Token = string.Empty;
+            CreatedByIp = string.Empty;
+        }
+
         public RefreshToken(Guid userId, string token, DateTime expires, string createdByIp)
         {
             UserId = userId;
