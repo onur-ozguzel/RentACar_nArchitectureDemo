@@ -9,6 +9,7 @@ https://www.udemy.com/course/c-net-core-clean-architecture-cqrs-proje-altyap-kur
 
 https://www.udemy.com/course/c-net-core-clean-architecture-cqrs-proje-altyap-kursu-3
 
+https://www.udemy.com/course/c-net-core-clean-architecture-cqrs-proje-altyap-kursu-4
 
 Thanks for sharing this beautiful content.
 
