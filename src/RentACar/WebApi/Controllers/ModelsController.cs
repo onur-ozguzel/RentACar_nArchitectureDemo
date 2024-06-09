@@ -1,9 +1,7 @@
-﻿using Application.Features.Brands.Queries.GetList;
-using Application.Features.Models.Queries.GetList;
+﻿using Application.Features.Models.Queries.GetList;
 using Application.Features.Models.Queries.GetListByDynamic;
 using Core.Application.Requests;
 using Core.Persistence.Dynamic;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers
